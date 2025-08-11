@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <style>
-    :root{--bg:#0b1220;--fg:#0b1220;--muted:#57607A;--brand:#67E8F9;--brand2:#22D3EE;--paper:#F7F3EF;}
+    :root{--fg:#0b1220;--muted:#57607A;--brand:#67E8F9;--brand2:#22D3EE;--paper:#F7F3EF;}
     *{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--paper)}body{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--fg);line-height:1.6}
     .wrap{max-width:1040px;margin:0 auto;padding:32px}header{display:flex;align-items:center;justify-content:space-between;gap:16px}
     .logo{display:flex;align-items:center;gap:10px;font-weight:700}.logo span{font-size:20px;letter-spacing:.5px}
@@ -50,8 +50,8 @@
         <h1>一站式 AI 語音健康助理</h1>
         <p class="lead">用「說的」就能記錄健康；Nuvora 立即分析心率、飲水、睡眠等資料，產生個人化建議。長者友善、上班族省時。</p>
         <div class="cta">
-          <a class="btn" href="#demo">觀看 Demo</a>
-          <a class="btn secondary" href="#contact">聯絡</a>
+          <a class="btn" href="#demo">Watch Demo</a>
+          <a class="btn secondary" href="#contact">Contact</a>
         </div>
       </div>
       <div class="img card"></div>
@@ -68,20 +68,21 @@
     <section id="demo" class="section">
       <div class="card">
         <div style="display:flex;gap:8px;margin-bottom:8px">
-          <button id="btn-zh" class="btn" type="button">中文</button>
-          <button id="btn-en" class="btn secondary" type="button">English</button>
+          <button id="btn-en" class="btn" type="button">English</button>
+          <button id="btn-zh" class="btn secondary" type="button">中文</button>
         </div>
         <div style="aspect-ratio:16/9" class="card">
+          <!-- Default to EN video -->
           <iframe id="demo-frame" width="100%" height="100%"
             src="https://www.youtube.com/embed/YBiULfbhPRk"
-            title="Nuvora Demo" frameborder="0" allowfullscreen></iframe>
+            title="Nuvora English Intro" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
     </section>
 
     <section id="contact" class="section">
       <div class="card">
-        <h3>聯絡</h3>
+        <h3>聯絡 / Contact</h3>
         <p>朱雅歆（Nuvora 獨立開發者） / yaxinzhu2002@gmail.com</p>
       </div>
     </section>
@@ -90,11 +91,11 @@
   </div>
   <script>
     document.getElementById('y').textContent=new Date().getFullYear();
-    const zh = { id: "YBiULfbhPRk", title: "Nuvora 中文介紹" };
-    const en = { id: "VIDEO_ID_EN", title: "Nuvora English Intro" };
+    const en = { id: "YBiULfbhPRk", title: "Nuvora English Intro" };
+    const zh = { id: "VIDEO_ID_ZH", title: "Nuvora 中文介紹" }; // TODO: 加上中文影片 ID 後啟用
     const frame = document.getElementById('demo-frame');
-    document.getElementById('btn-zh').onclick = () => { frame.src = `https://www.youtube.com/embed/${zh.id}`; frame.title = zh.title; };
     document.getElementById('btn-en').onclick = () => { frame.src = `https://www.youtube.com/embed/${en.id}`; frame.title = en.title; };
+    document.getElementById('btn-zh').onclick = () => { frame.src = `https://www.youtube.com/embed/${zh.id}`; frame.title = zh.title; };
   </script>
 </body>
 </html>
