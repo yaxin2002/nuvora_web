@@ -9,7 +9,6 @@
   <meta property="og:description" content="Speak to track health. AI turns your voice into personalized insights.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <!-- Favicon & App Icons -->
   <link rel="icon" href="/icons/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/icons/favicon-32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="/icons/favicon-16.png" sizes="16x16">
@@ -19,8 +18,6 @@
     :root{--fg:#0b1220;--muted:#57607A;--brand:#67E8F9;--brand2:#22D3EE;--paper:#F7F3EF;}
     *{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--paper)}body{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--fg);line-height:1.6}
     .wrap{max-width:1040px;margin:0 auto;padding:32px}
-
-    /* Header */
     header{display:flex;align-items:center;justify-content:space-between;gap:16px}
     .logo{display:flex;align-items:center;gap:10px;font-weight:700}
     .logo img{width:24px;height:24px;border-radius:6px;display:block}
@@ -31,8 +28,6 @@
     .lang{display:flex;gap:8px;align-items:center}
     .lang button{background:transparent;border:1px solid rgba(0,0,0,.2);padding:6px 12px;border-radius:999px;cursor:pointer}
     .lang button.active{background:linear-gradient(90deg,var(--brand),var(--brand2));color:#001018;border:0}
-
-    /* Hero & sections */
     .hero{display:grid;grid-template-columns:1fr;gap:28px;align-items:center;padding:48px 0}
     .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(34,211,238,.12);border:1px solid rgba(103,232,249,.35);
       padding:6px 10px;border-radius:999px;font-size:12px}
@@ -46,15 +41,8 @@
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .section{padding:28px 0}
     .foot{opacity:.7;font-size:13px;padding:24px 0;border-top:1px solid rgba(0,0,0,.08);margin-top:24px}
-
-    /* Mobile tweaks */
-    @media (max-width: 920px){
-      .grid{grid-template-columns:1fr}
-      h1{font-size:38px}
-      .lead{font-size:16px}
-    }
+    @media (max-width: 920px){ .grid{grid-template-columns:1fr} h1{font-size:38px} .lead{font-size:16px} }
     @media (max-width: 680px){
-      /* Use grid header on small screens: logo + lang on first row, nav on second row */
       header{display:grid;grid-template-columns:1fr auto;grid-template-areas:"logo lang" "nav nav";align-items:center}
       .logo{grid-area:logo}
       nav{grid-area:nav;justify-self:start;margin-top:10px}
@@ -132,46 +120,31 @@
   <script>
     document.getElementById('y').textContent=new Date().getFullYear();
 
-    const vids = {
-      en: { id: "YBiULfbhPRk", title: "Nuvora English Intro" },
-      zh: { id: "YBiULfbhPRk", title: "Nuvora 中文介紹" } // TODO: replace with zh video ID later
-    };
+    const vids = { en: { id: "YBiULfbhPRk", title: "Nuvora English Intro" }, zh: { id: "YBiULfbhPRk", title: "Nuvora 中文介紹" } };
 
     const dict = {
       en: {
-        nav_features: "Features",
-        nav_demo: "Demo",
-        nav_contact: "Contact",
+        nav_features: "Features", nav_demo: "Demo", nav_contact: "Contact",
         badge: "Speak-first health, powered by AI",
         h1: "One-stop AI Voice Health Assistant",
         lead: "Log health by talking; Nuvora instantly analyzes heart rate, hydration, sleep and more, producing personalized insights. Senior-friendly and time-saving.",
-        cta_primary: "Watch Demo",
-        cta_secondary: "Contact",
-        f1t: "🎙️ Voice input",
-        f1d: "No typing needed; zero learning curve—especially friendly for seniors.",
-        f2t: "🧠 AI insights",
-        f2d: "Combine multi-source data to deliver personalized reminders and trends.",
-        f3t: "🏢 B2B ready",
-        f3d: "Dashboards, APIs, compliance, and multi-tenant scalability.",
+        cta_primary: "Watch Demo", cta_secondary: "Contact",
+        f1t: "🎙️ Voice input", f1d: "No typing needed; zero learning curve—especially friendly for seniors.",
+        f2t: "🧠 AI insights", f2d: "Combine multi-source data to deliver personalized reminders and trends.",
+        f3t: "🏢 B2B ready", f3d: "Dashboards, APIs, compliance, and multi-tenant scalability.",
         contact_title: "Contact",
         contact_body_html: 'Ya Xin Zhu (Vesper) — Indie Developer, Nuvora<br>Email: <a href="mailto:yaxinzhu2002@gmail.com">yaxinzhu2002@gmail.com</a><br>Phone: <a href="tel:+886970896620">+886 970-896-620</a>',
         rights: "All rights reserved."
       },
       zh: {
-        nav_features: "功能",
-        nav_demo: "Demo",
-        nav_contact: "聯絡",
+        nav_features: "功能", nav_demo: "Demo", nav_contact: "聯絡",
         badge: "一句話開始的健康革命",
         h1: "一站式 AI 語音健康助理",
         lead: "用「說的」就能記錄健康；Nuvora 立即分析心率、飲水、睡眠等資料，產生個人化建議。長者友善、上班族省時。",
-        cta_primary: "觀看 Demo",
-        cta_secondary: "聯絡我們",
-        f1t: "🎙️ 語音輸入",
-        f1d: "免打字、免學習曲線；對長者特別友善。",
-        f2t: "🧠 AI 建議",
-        f2d: "結合多源資料，提供個人化健康提醒與趨勢。",
-        f3t: "🏢 B2B 擴充",
-        f3d: "企業儀表板、API、合規與多租戶架構。",
+        cta_primary: "觀看 Demo", cta_secondary: "聯絡我們",
+        f1t: "🎙️ 語音輸入", f1d: "免打字、免學習曲線；對長者特別友善。",
+        f2t: "🧠 AI 建議", f2d: "結合多源資料，提供個人化健康提醒與趨勢。",
+        f3t: "🏢 B2B 擴充", f3d: "企業儀表板、API、合規與多租戶架構。",
         contact_title: "聯絡",
         contact_body_html: '朱雅歆（Nuvora 獨立開發者）<br>Email：<a href="mailto:yaxinzhu2002@gmail.com">yaxinzhu2002@gmail.com</a><br>Phone：<a href="tel:+886970896620">+886 970-896-620</a>',
         rights: "保留所有權利。"
@@ -198,34 +171,28 @@
       document.getElementById('contact-title').textContent = t.contact_title;
       document.getElementById('contact-body').innerHTML = t.contact_body_html;
       document.getElementById('rights').textContent = t.rights;
-
-      // video
-      const v = vids[lang];
-      const frame = document.getElementById('demo-frame');
-      frame.src = 'https://www.youtube.com/embed/' + (v.id || 'YBiULfbhPRk');
-      frame.title = v.title;
-
-      // toggle active button styles
+      const v = vids[lang]; const frame = document.getElementById('demo-frame');
+      frame.src = 'https://www.youtube.com/embed/' + (v.id || 'YBiULfbhPRk'); frame.title = v.title;
       document.getElementById('lang-en').classList.toggle('active', lang === 'en');
       document.getElementById('lang-zh').classList.toggle('active', lang === 'zh');
-
-      // remember
       try { localStorage.setItem('nuvora_lang', lang); } catch (e) {}
     }
 
-    // Bind buttons
     document.getElementById('lang-en').onclick = () => setLang('en');
     document.getElementById('lang-zh').onclick = () => setLang('zh');
 
-    // Init language
-    let initLang = 'en';
-    try {
-      const saved = localStorage.getItem('nuvora_lang');
-      if (saved) initLang = saved;
-    } catch (e) {}
-    setLang(initLang);
+    // Apply ?lang= immediately if present
+    (function() {
+      try {
+        const q = new URLSearchParams(location.search);
+        const forced = q.get('lang');
+        if (forced) { setLang(forced); return; }
+      } catch (e) {};
+      let initLang = 'en';
+      try { const saved = localStorage.getItem('nuvora_lang'); if (saved) initLang = saved; } catch (e) {}
+      setLang(initLang);
+    })();
 
-    // Video language buttons
     document.getElementById('btn-en').onclick = () => setLang('en');
     document.getElementById('btn-zh').onclick = () => setLang('zh');
   </script>
