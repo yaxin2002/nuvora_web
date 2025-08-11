@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nuvora｜一句話開始的健康革命</title>
+  <meta name="description" content="Nuvora 是一站式 AI 語音健康助理：語音紀錄健康、智慧分析、長者友善介面。">
+  <meta property="og:title" content="Nuvora｜一句話開始的健康革命">
+  <meta property="og:description" content="語音輸入 × AI 分析 × 長者友善。現在申請搶先體驗。">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    :root{--bg:#0b1220;--fg:#0b1220;--muted:#57607A;--brand:#67E8F9;--brand2:#22D3EE;--paper:#F7F3EF;}
+    *{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--paper)}body{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--fg);line-height:1.6}
+    .wrap{max-width:1040px;margin:0 auto;padding:32px}header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:700}.logo span{font-size:20px;letter-spacing:.5px}
+    nav a{color:var(--fg);opacity:.8;text-decoration:none;margin-left:18px}nav a:hover{opacity:1}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:64px 0}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(34,211,238,.12);border:1px solid rgba(103,232,249,.35);color:#0b1220;
+      padding:6px 10px;border-radius:999px;font-size:12px}
+    h1{font-size:44px;line-height:1.1;margin:16px 0 12px}
+    .lead{font-size:18px;color:var(--muted);max-width:58ch}
+    .cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .btn{background:linear-gradient(90deg,var(--brand),var(--brand2));color:#001018;border:0;padding:12px 16px;border-radius:10px;
+      font-weight:700;text-decoration:none}
+    .btn.secondary{background:transparent;border:1px solid rgba(0,0,0,.2);color:#0b1220}
+    .card{background:rgba(255,255,255,.6);border:1px solid rgba(0,0,0,.06);border-radius:14px;padding:18px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .section{padding:28px 0}
+    .foot{opacity:.7;font-size:13px;padding:24px 0;border-top:1px solid rgba(0,0,0,.08);margin-top:24px}
+    .img{aspect-ratio:4/3;border-radius:14px;background:linear-gradient(180deg,rgba(103,232,249,.25),transparent 55%),
+      linear-gradient(90deg,rgba(34,211,238,.25),transparent 45%),#e7eef5;border:1px solid rgba(0,0,0,.08)}
+    @media(max-width:920px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo"><span>🌊 Nuvora</span></div>
+      <nav>
+        <a href="#features">功能</a>
+        <a href="#demo">Demo</a>
+        <a href="#contact">聯絡</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <span class="badge">一句話開始的健康革命</span>
+        <h1>一站式 AI 語音健康助理</h1>
+        <p class="lead">用「說的」就能記錄健康；Nuvora 立即分析心率、飲水、睡眠等資料，產生個人化建議。長者友善、上班族省時。</p>
+        <div class="cta">
+          <a class="btn" href="#demo">觀看 Demo</a>
+          <a class="btn secondary" href="#contact">聯絡</a>
+        </div>
+      </div>
+      <div class="img card"></div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="grid">
+        <div class="card"><h3>🎙️ 語音輸入</h3><p>免打字、免學習曲線；對長者特別友善。</p></div>
+        <div class="card"><h3>🧠 AI 建議</h3><p>結合多源資料，提供個人化健康提醒與趨勢。</p></div>
+        <div class="card"><h3>🏢 B2B 擴充</h3><p>企業儀表板、API、合規與多租戶架構。</p></div>
+      </div>
+    </section>
+
+    <section id="demo" class="section">
+      <div class="card">
+        <div style="display:flex;gap:8px;margin-bottom:8px">
+          <button id="btn-zh" class="btn" type="button">中文</button>
+          <button id="btn-en" class="btn secondary" type="button">English</button>
+        </div>
+        <div style="aspect-ratio:16/9" class="card">
+          <iframe id="demo-frame" width="100%" height="100%"
+            src="https://www.youtube.com/embed/YBiULfbhPRk"
+            title="Nuvora Demo" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="card">
+        <h3>聯絡</h3>
+        <p>朱雅歆（Nuvora 獨立開發者） / yaxinzhu2002@gmail.com</p>
+      </div>
+    </section>
+
+    <footer class="foot">© <span id="y"></span> Nuvora. All rights reserved.</footer>
+  </div>
+  <script>
+    document.getElementById('y').textContent=new Date().getFullYear();
+    const zh = { id: "YBiULfbhPRk", title: "Nuvora 中文介紹" };
+    const en = { id: "VIDEO_ID_EN", title: "Nuvora English Intro" };
+    const frame = document.getElementById('demo-frame');
+    document.getElementById('btn-zh').onclick = () => { frame.src = `https://www.youtube.com/embed/${zh.id}`; frame.title = zh.title; };
+    document.getElementById('btn-en').onclick = () => { frame.src = `https://www.youtube.com/embed/${en.id}`; frame.title = en.title; };
+  </script>
+</body>
+</html>
