@@ -1,12 +1,32 @@
 <!doctype html>
-<meta charset="utf-8">
-<title>Redirecting…</title>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Redirecting…</title>
+  <style>
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans TC','Helvetica Neue',Arial,'PingFang TC',sans-serif;
+    background:#F8F2EA;color:#111827;display:grid;place-items:center;height:100vh;margin:0}
+    .card{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:16px;padding:20px;box-shadow:0 8px 24px rgba(0,0,0,.06);max-width:520px}
+    .m{color:#4B5563}
+    a{color:#0E7490;font-weight:700}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Redirecting…</h1>
+    <p class="m" id="msg">Please wait.</p>
+    <p class="m">If nothing happens, <a id="a" href="/">click here</a>.</p>
+  </div>
 <script>
-  try {
+  (function(){
     const p = new URLSearchParams(location.search);
-    const lang = p.get('lang');
-    if (lang) localStorage.setItem('nuvora_lang', lang);
-  } catch (e) {}
-  location.replace('/#demo');
+    const lang = p.get('lang') || 'zh';
+    const target = '/' + '?lang=' + encodeURIComponent(lang);
+    document.getElementById('a').href = target;
+    document.getElementById('msg').textContent = lang==='en' ? 'Opening the English page…' : '正在開啟中文頁面…';
+    setTimeout(()=>{ location.replace(target); }, 80);
+  })();
 </script>
-<p>Redirecting to demo… If you are not redirected, <a href="/#demo">click here</a>.</p>
+</body>
+</html>

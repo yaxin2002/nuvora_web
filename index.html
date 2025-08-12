@@ -1,200 +1,165 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Nuvora — AI Voice Health Assistant</title>
-  <meta name="description" content="Nuvora is a one-stop AI voice health assistant: voice logging, smart insights, and senior-friendly design.">
-  <meta property="og:title" content="Nuvora — AI Voice Health Assistant">
-  <meta property="og:description" content="Speak to track health. AI turns your voice into personalized insights.">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="/icons/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" href="/icons/favicon-32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="/icons/favicon-16.png" sizes="16x16">
-  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" sizes="180x180">
-  <link rel="manifest" href="/icons/site.webmanifest">
-  <style>
-    :root{--fg:#0b1220;--muted:#57607A;--brand:#67E8F9;--brand2:#22D3EE;--paper:#F7F3EF;}
-    *{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--paper)}body{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--fg);line-height:1.6}
-    .wrap{max-width:1040px;margin:0 auto;padding:32px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .logo{display:flex;align-items:center;gap:10px;font-weight:700}
-    .logo img{width:24px;height:24px;border-radius:6px;display:block}
-    .logo span{font-size:20px;letter-spacing:.5px}
-    nav{display:flex;gap:18px;align-items:center}
-    nav a{color:var(--fg);opacity:.8;text-decoration:none;white-space:nowrap;font-size:16px}
-    nav a:hover{opacity:1}
-    .lang{display:flex;gap:8px;align-items:center}
-    .lang button{background:transparent;border:1px solid rgba(0,0,0,.2);padding:6px 12px;border-radius:999px;cursor:pointer}
-    .lang button.active{background:linear-gradient(90deg,var(--brand),var(--brand2));color:#001018;border:0}
-    .hero{display:grid;grid-template-columns:1fr;gap:28px;align-items:center;padding:48px 0}
-    .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(34,211,238,.12);border:1px solid rgba(103,232,249,.35);
-      padding:6px 10px;border-radius:999px;font-size:12px}
-    h1{font-size:44px;line-height:1.1;margin:16px 0 12px}
-    .lead{font-size:18px;color:var(--muted);max-width:58ch}
-    .cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
-    .btn{background:linear-gradient(90deg,var(--brand),var(--brand2));color:#001018;border:0;padding:12px 16px;border-radius:10px;
-      font-weight:700;text-decoration:none}
-    .btn.secondary{background:transparent;border:1px solid rgba(0,0,0,.2);color:#0b1220}
-    .card{background:rgba(255,255,255,.6);border:1px solid rgba(0,0,0,.06);border-radius:14px;padding:18px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .section{padding:28px 0}
-    .foot{opacity:.7;font-size:13px;padding:24px 0;border-top:1px solid rgba(0,0,0,.08);margin-top:24px}
-    @media (max-width: 920px){ .grid{grid-template-columns:1fr} h1{font-size:38px} .lead{font-size:16px} }
-    @media (max-width: 680px){
-      header{display:grid;grid-template-columns:1fr auto;grid-template-areas:"logo lang" "nav nav";align-items:center}
-      .logo{grid-area:logo}
-      nav{grid-area:nav;justify-self:start;margin-top:10px}
-      .lang{grid-area:lang;justify-self:end}
-      .logo span{font-size:18px}
-      nav a{font-size:15px}
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nuvora｜一句話，開始健康管理</title>
+  <meta name="description" content="Nuvora：一站式 AI 語音健康助理。用「說的」就能記錄飲水、睡眠、心情與日常健康事項；Nuvora 自動整理、提醒，讓維持好習慣更容易。">
+  <link rel="icon" href="icons/icon.png">
+  <link rel="apple-touch-icon" href="icons/icon.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="logo">
-        <img src="/icons/android-chrome-192x192.png" alt="Nuvora">
-        <span>Nuvora</span>
-      </div>
-      <nav>
-        <a href="#features" id="nav-features">Features</a>
-        <a href="#demo" id="nav-demo">Demo</a>
-        <a href="#contact" id="nav-contact">Contact</a>
-      </nav>
-      <div class="lang">
-        <button id="lang-zh" aria-label="切換中文">中文</button>
-        <button id="lang-en" class="active" aria-label="Switch to English">EN</button>
-      </div>
-    </header>
+  <header class="nav">
+    <div class="brand">
+      <img class="logo" src="icons/icon.png" alt="Nuvora Logo" width="28" height="28" />
+      <span class="brand-name">Nuvora</span>
+    </div>
+    <nav class="links">
+      <a href="#features" data-i18n="nav_features">功能</a>
+      <a href="#demo" data-i18n="nav_demo">Demo</a>
+      <a href="#contact" data-i18n="nav_contact">聯絡</a>
+    </nav>
+    <div class="lang-switch">
+      <button id="btn-zh" class="pill active">中文</button>
+      <button id="btn-en" class="pill">EN</button>
+    </div>
+  </header>
 
-    <section class="hero">
-      <div>
-        <span class="badge" id="badge">Speak-first health, powered by AI</span>
-        <h1 id="h1">One-stop AI Voice Health Assistant</h1>
-        <p class="lead" id="lead">Log health by talking; Nuvora instantly analyzes heart rate, hydration, sleep and more, producing personalized insights. Senior-friendly and time-saving.</p>
-        <div class="cta">
-          <a class="btn" href="#demo" id="cta-primary">Watch Demo</a>
-          <a class="btn secondary" href="#contact" id="cta-secondary">Contact</a>
-        </div>
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <p class="eyebrow" data-i18n="eyebrow">一句話，開始健康管理</p>
+      <h1 class="title" data-i18n="hero_title">Nuvora｜一站式 AI 語音健康助理</h1>
+      <p class="subtitle" data-i18n="hero_sub">
+        用「說的」就能記錄飲水、睡眠、心情與日常健康事項；Nuvora 會自動幫你整理、提醒，讓維持好習慣變容易。
+      </p>
+      <div class="cta">
+        <a class="btn primary" id="watchDemo"
+           href="https://youtu.be/YBiULfbhPRk?si=aUKPPf3IKLRQxxic"
+           target="_blank" rel="noopener" data-i18n="cta_demo">觀看 Demo</a>
+        <a class="btn ghost" href="#contact" data-i18n="cta_contact">聯絡我</a>
       </div>
     </section>
 
+    <!-- Features / Value -->
     <section id="features" class="section">
-      <div class="grid">
-        <div class="card"><h3 id="f1t">🎙️ Voice input</h3><p id="f1d">No typing needed; zero learning curve—especially friendly for seniors.</p></div>
-        <div class="card"><h3 id="f2t">🧠 AI insights</h3><p id="f2d">Combine multi-source data to deliver personalized reminders and trends.</p></div>
-        <div class="card"><h3 id="f3t">🏢 B2B ready</h3><p id="f3d">Dashboards, APIs, compliance, and multi-tenant scalability.</p></div>
-      </div>
+      <h2 data-i18n="sec_value_title">你能得到什麼</h2>
+      <ul class="cards">
+        <li>
+          <h3 data-i18n="v1_t">說一說就記錄</h3>
+          <p data-i18n="v1_d">不必找欄位、不必學操作，開口就完成。</p>
+        </li>
+        <li>
+          <h3 data-i18n="v2_t">自動整理成列表與圖表</h3>
+          <p data-i18n="v2_d">今天做了什麼、還能做什麼，一眼看懂。</p>
+        </li>
+        <li>
+          <h3 data-i18n="v3_t">貼心提醒</h3>
+          <p data-i18n="v3_d">在你最容易做到的時刻，給剛剛好的提示。</p>
+        </li>
+        <li>
+          <h3 data-i18n="v4_t">個人化建議</h3>
+          <p data-i18n="v4_d">依你的步調，給可行的小步驟（持續推出）。</p>
+        </li>
+        <li>
+          <h3 data-i18n="v5_t">雙語友善</h3>
+          <p data-i18n="v5_d">中文／英文介面切換，出國或國際合作都能用。</p>
+        </li>
+      </ul>
     </section>
 
-    <section id="demo" class="section">
-      <div class="card">
-        <div style="display:flex;gap:8px;margin-bottom:8px">
-          <button id="btn-en" class="btn" type="button">English video</button>
-          <button id="btn-zh" class="btn secondary" type="button">中文影片</button>
+    <!-- Who it's for -->
+    <section class="section alt">
+      <h2 data-i18n="sec_audience_title">適用對象</h2>
+      <div class="cards three">
+        <div>
+          <h3 data-i18n="aud1_t">忙碌的上班族與學生</h3>
+          <p data-i18n="aud1_d">快速記錄、穩定習慣。</p>
         </div>
-        <div style="aspect-ratio:16/9" class="card">
-          <iframe id="demo-frame" width="100%" height="100%"
-            src="https://www.youtube.com/embed/YBiULfbhPRk"
-            title="Nuvora English Intro" frameborder="0" allowfullscreen></iframe>
+        <div>
+          <h3 data-i18n="aud2_t">長者與照護者</h3>
+          <p data-i18n="aud2_d">用語音就能完成紀錄，家人更好協助。</p>
+        </div>
+        <div>
+          <h3 data-i18n="aud3_t">關注健康的你</h3>
+          <p data-i18n="aud3_d">需要溫和但持續的推進力。</p>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section">
-      <div class="card">
-        <h3 id="contact-title">Contact</h3>
-        <p id="contact-body">
-          Ya Xin Zhu (Vesper) — Indie Developer, Nuvora<br>
-          Email: <a href="mailto:yaxinzhu2002@gmail.com">yaxinzhu2002@gmail.com</a><br>
-          Phone: <a href="tel:+886970896620">+886 970-896-620</a>
-        </p>
+    <!-- Why choose -->
+    <section class="section">
+      <h2 data-i18n="sec_why_title">為什麼選擇 Nuvora</h2>
+      <div class="cards three">
+        <div>
+          <h3 data-i18n="why1_t">零門檻</h3>
+          <p data-i18n="why1_d">自然語句就能使用。</p>
+        </div>
+        <div>
+          <h3 data-i18n="why2_t">不打擾</h3>
+          <p data-i18n="why2_d">提醒精簡，不騷擾。</p>
+        </div>
+        <div>
+          <h3 data-i18n="why3_t">重視隱私</h3>
+          <p data-i18n="why3_d">資料優先存放在你的裝置，雲端將採加密與可控同步。</p>
+        </div>
       </div>
     </section>
 
-    <footer class="foot">© <span id="y"></span> Nuvora. <span id="rights">All rights reserved.</span></footer>
-  </div>
-  <script>
-    document.getElementById('y').textContent=new Date().getFullYear();
+    <!-- Roadmap -->
+    <section class="section alt" id="demo">
+      <h2 data-i18n="sec_next_title">近期與接下來</h2>
+      <ul class="timeline">
+        <li><span data-i18n="next1_t">近期</span> — <span data-i18n="next1_d">更聰明的每日總結與待辦清單，知道今天做到幾分。</span></li>
+        <li><span data-i18n="next2_t">下一步</span> — <span data-i18n="next2_d">拍照記錄飲食，估算份量與營養。</span></li>
+        <li><span data-i18n="next3_t">之後</span> — <span data-i18n="next3_d">整合 Apple Health／Google Fit，資料一次看完。</span></li>
+        <li><span data-i18n="next4_t">企業／團隊版</span> — <span data-i18n="next4_d">匿名化儀表板，協助員工健康促進與 ESG（洽談中）。</span></li>
+      </ul>
+      <div class="cta">
+        <a class="btn primary" id="watchDemo2"
+           href="https://youtu.be/YBiULfbhPRk?si=aUKPPf3IKLRQxxic"
+           target="_blank" rel="noopener" data-i18n="cta_demo">觀看 Demo</a>
+      </div>
+    </section>
 
-    const vids = { en: { id: "YBiULfbhPRk", title: "Nuvora English Intro" }, zh: { id: "YBiULfbhPRk", title: "Nuvora 中文介紹" } };
+    <!-- FAQ -->
+    <section class="section">
+      <h2>FAQ</h2>
+      <details>
+        <summary data-i18n="faq1_q">Nuvora 會取代醫療建議嗎？</summary>
+        <p data-i18n="faq1_a">不會。Nuvora 協助你培養習慣與自我管理，不提供醫療診斷；有任何不適請洽專業醫療人員。</p>
+      </details>
+      <details>
+        <summary data-i18n="faq2_q">什麼時候可以下載？</summary>
+        <p data-i18n="faq2_a">目前開放 Demo 與體驗名單；想第一時間收到通知，歡迎來信。</p>
+      </details>
+    </section>
 
-    const dict = {
-      en: {
-        nav_features: "Features", nav_demo: "Demo", nav_contact: "Contact",
-        badge: "Speak-first health, powered by AI",
-        h1: "One-stop AI Voice Health Assistant",
-        lead: "Log health by talking; Nuvora instantly analyzes heart rate, hydration, sleep and more, producing personalized insights. Senior-friendly and time-saving.",
-        cta_primary: "Watch Demo", cta_secondary: "Contact",
-        f1t: "🎙️ Voice input", f1d: "No typing needed; zero learning curve—especially friendly for seniors.",
-        f2t: "🧠 AI insights", f2d: "Combine multi-source data to deliver personalized reminders and trends.",
-        f3t: "🏢 B2B ready", f3d: "Dashboards, APIs, compliance, and multi-tenant scalability.",
-        contact_title: "Contact",
-        contact_body_html: 'Ya Xin Zhu (Vesper) — Indie Developer, Nuvora<br>Email: <a href="mailto:yaxinzhu2002@gmail.com">yaxinzhu2002@gmail.com</a><br>Phone: <a href="tel:+886970896620">+886 970-896-620</a>',
-        rights: "All rights reserved."
-      },
-      zh: {
-        nav_features: "功能", nav_demo: "Demo", nav_contact: "聯絡",
-        badge: "一句話開始的健康革命",
-        h1: "一站式 AI 語音健康助理",
-        lead: "用「說的」就能記錄健康；Nuvora 立即分析心率、飲水、睡眠等資料，產生個人化建議。長者友善、上班族省時。",
-        cta_primary: "觀看 Demo", cta_secondary: "聯絡我們",
-        f1t: "🎙️ 語音輸入", f1d: "免打字、免學習曲線；對長者特別友善。",
-        f2t: "🧠 AI 建議", f2d: "結合多源資料，提供個人化健康提醒與趨勢。",
-        f3t: "🏢 B2B 擴充", f3d: "企業儀表板、API、合規與多租戶架構。",
-        contact_title: "聯絡",
-        contact_body_html: '朱雅歆（Nuvora 獨立開發者）<br>Email：<a href="mailto:yaxinzhu2002@gmail.com">yaxinzhu2002@gmail.com</a><br>Phone：<a href="tel:+886970896620">+886 970-896-620</a>',
-        rights: "保留所有權利。"
-      }
-    };
+    <!-- About -->
+    <section class="section alt">
+      <h2 data-i18n="about_title">關於我</h2>
+      <p class="about" data-i18n="about_body">
+        朱雅歆（Ya Xin Zhu / Vesper）｜Nuvora 創始人・獨立開發者。相信「健康管理應該是友善、可持續的」。Nuvora 的使命，是把複雜留在後台，把信心留給你。
+      </p>
+    </section>
 
-    function setLang(lang) {
-      const t = dict[lang];
-      document.documentElement.lang = lang === 'zh' ? 'zh-Hant' : 'en';
-      document.getElementById('nav-features').textContent = t.nav_features;
-      document.getElementById('nav-demo').textContent = t.nav_demo;
-      document.getElementById('nav-contact').textContent = t.nav_contact;
-      document.getElementById('badge').textContent = t.badge;
-      document.getElementById('h1').textContent = t.h1;
-      document.getElementById('lead').textContent = t.lead;
-      document.getElementById('cta-primary').textContent = t.cta_primary;
-      document.getElementById('cta-secondary').textContent = t.cta_secondary;
-      document.getElementById('f1t').textContent = t.f1t;
-      document.getElementById('f1d').textContent = t.f1d;
-      document.getElementById('f2t').textContent = t.f2t;
-      document.getElementById('f2d').textContent = t.f2d;
-      document.getElementById('f3t').textContent = t.f3t;
-      document.getElementById('f3d').textContent = t.f3d;
-      document.getElementById('contact-title').textContent = t.contact_title;
-      document.getElementById('contact-body').innerHTML = t.contact_body_html;
-      document.getElementById('rights').textContent = t.rights;
-      const v = vids[lang]; const frame = document.getElementById('demo-frame');
-      frame.src = 'https://www.youtube.com/embed/' + (v.id || 'YBiULfbhPRk'); frame.title = v.title;
-      document.getElementById('lang-en').classList.toggle('active', lang === 'en');
-      document.getElementById('lang-zh').classList.toggle('active', lang === 'zh');
-      try { localStorage.setItem('nuvora_lang', lang); } catch (e) {}
-    }
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <h2 data-i18n="contact_title">聯絡方式</h2>
+      <p data-i18n="contact_body">商務／合作／投資意向，歡迎來信：</p>
+      <p class="email"><a href="mailto:yaxinzhu2002@gmail.com">yaxinzhu2002@gmail.com</a></p>
+    </section>
 
-    document.getElementById('lang-en').onclick = () => setLang('en');
-    document.getElementById('lang-zh').onclick = () => setLang('zh');
+    <footer class="footer">
+      <div>© <span id="year"></span> Nuvora · All rights reserved.</div>
+      <div class="mini-lang">
+        <button id="mini-zh" class="link">中文</button><span>·</span>
+        <button id="mini-en" class="link">EN</button>
+      </div>
+    </footer>
+  </main>
 
-    // Apply ?lang= immediately if present
-    (function() {
-      try {
-        const q = new URLSearchParams(location.search);
-        const forced = q.get('lang');
-        if (forced) { setLang(forced); return; }
-      } catch (e) {};
-      let initLang = 'en';
-      try { const saved = localStorage.getItem('nuvora_lang'); if (saved) initLang = saved; } catch (e) {}
-      setLang(initLang);
-    })();
-
-    document.getElementById('btn-en').onclick = () => setLang('en');
-    document.getElementById('btn-zh').onclick = () => setLang('zh');
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
