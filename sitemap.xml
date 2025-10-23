@@ -1,26 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- 🔹 主頁（canonical） -->
   <url>
     <loc>https://nuvora-web.vercel.app/</loc>
-    <lastmod>2025-10-23</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-10-23T06:12:00Z</lastmod>
     <priority>1.0</priority>
   </url>
-
-  <!-- 🔹 中文版 -->
   <url>
-    <loc>https://nuvora-web.vercel.app/?lang=zh</loc>
-    <lastmod>2025-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- 🔹 英文版 -->
-  <url>
-    <loc>https://nuvora-web.vercel.app/?lang=en</loc>
-    <lastmod>2025-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://nuvora-web.vercel.app/about.html</loc>
+    <lastmod>2025-10-23T06:12:00Z</lastmod>
+    <priority>0.8</priority>
   </url>
 </urlset>
