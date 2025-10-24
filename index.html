@@ -1,36 +1,19 @@
 <!doctype html>
-<html lang="zh">
+<html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nuvora｜AI 語音健康助理</title>
-  <meta name="description" content="Nuvora 是一款以語音為先的 AI 健康助理。用一句話就能記錄飲水、睡眠、心情與健康事項，系統自動整理成清單與圖表，幫你養成持續的好習慣。">
-
-  <link rel="canonical" href="https://nuvora-web.vercel.app/?lang=zh">
-  <link rel="alternate" href="https://nuvora-web.vercel.app/?lang=zh" hreflang="zh-Hant">
-  <link rel="alternate" href="https://nuvora-web.vercel.app/?lang=en" hreflang="en">
-  <link rel="alternate" href="https://nuvora-web.vercel.app/" hreflang="x-default">
+  <title id="page-title">Nuvora｜AI 語音健康助理</title>
+  <meta name="description" id="meta-desc" content="Nuvora 是一款以語音為先的 AI 健康助理。用一句話就能記錄飲水、睡眠、心情與健康事項，系統自動整理成清單與圖表，幫你養成持續的好習慣。">
 
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://nuvora-web.vercel.app/?lang=zh">
-  <meta property="og:title" content="Nuvora｜AI 語音健康助理">
-  <meta property="og:description" content="一句話開始健康管理，用說的就能記錄健康。">
-  <meta property="og:image" content="https://nuvora-web.vercel.app/icons/og-cover-text.png">
-  <meta property="og:image:alt" content="一句話開始健康管理 - Nuvora AI 語音健康助理">
-  <meta property="og:locale" content="zh_TW">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Nuvora｜AI 語音健康助理">
-  <meta name="twitter:description" content="一句話開始健康管理，用語音記錄、清單與圖表、貼心提醒。">
-  <meta name="twitter:image" content="https://nuvora-web.vercel.app/icons/og-cover-text.png">
-
-  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
-  <link rel="icon" href="icons/favicon.ico" sizes="any">
-  <meta name="theme-color" content="#F8F2EA">
+  <meta property="og:url" id="og-url" content="https://nuvora-web.vercel.app/?lang=zh">
+  <meta property="og:title" id="og-title" content="Nuvora｜AI 語音健康助理">
+  <meta property="og:description" id="og-desc" content="用說的就能記錄健康，Nuvora 自動整理、提醒，讓維持好習慣變容易。">
+  <meta property="og:image" content="https://nuvora-web.vercel.app/icons/og-cover.png">
 
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="icons/favicon.ico" sizes="any">
 </head>
 <body>
   <header class="nav">
@@ -39,9 +22,9 @@
       <span class="brand-name">Nuvora</span>
     </div>
     <nav class="links">
-      <a href="#features">功能</a>
+      <a href="#features">功能 / Features</a>
       <a href="#demo">Demo</a>
-      <a href="#contact">聯絡</a>
+      <a href="#contact">聯絡 / Contact</a>
     </nav>
     <div class="lang-switch">
       <button id="btn-zh" class="pill active">中文</button>
@@ -50,99 +33,209 @@
   </header>
 
   <main>
-    <section class="hero" id="hero">
-      <p class="eyebrow">一句話，開始健康管理</p>
-      <h1 class="title">Nuvora｜一站式 AI 語音健康助理</h1>
-      <p class="subtitle">用「說的」就能記錄飲水、睡眠、心情與日常健康事項；Nuvora 會自動幫你整理、提醒，讓維持好習慣變容易。</p>
-      <div class="cta">
-        <a class="btn primary" id="watchDemo" href="https://youtu.be/YBiULfbhPRk?si=aUKPPf3IKLRQxxic" target="_blank" rel="noopener">觀看 Demo</a>
-        <a class="btn ghost" href="#contact">聯絡我</a>
-      </div>
-    </section>
+    <!-- 中文內容 -->
+    <div class="lang zh">
+      <section class="hero">
+        <p class="eyebrow">一句話，開始健康管理</p>
+        <h1 class="title">Nuvora｜一站式 AI 語音健康助理</h1>
+        <p class="subtitle">用「說的」就能記錄飲水、睡眠、心情與日常健康事項；Nuvora 會自動幫你整理、提醒，讓維持好習慣變容易。</p>
+        <div class="cta">
+          <a class="btn primary" href="https://youtu.be/YBiULfbhPRk?si=aUKPPf3IKLRQxxic" target="_blank">觀看 Demo</a>
+          <a class="btn ghost" href="#contact">聯絡我</a>
+        </div>
+      </section>
 
-    <section id="features" class="section">
-      <h2>你能得到什麼</h2>
-      <ul class="cards">
-        <li><h3>說一說就記錄</h3><p>不必找欄位、不必學操作，開口就完成。</p></li>
-        <li><h3>自動整理成列表與圖表</h3><p>今天做了什麼、還能做什麼，一眼看懂。</p></li>
-        <li><h3>貼心提醒</h3><p>在你最容易做到的時刻，給剛剛好的提示。</p></li>
-        <li><h3>個人化建議</h3><p>依你的步調，給可行的小步驟（持續推出）。</p></li>
-        <li><h3>雙語友善</h3><p>中文／英文介面切換，出國或國際合作都能用。</p></li>
-      </ul>
-    </section>
+      <section id="features" class="section">
+        <h2>你能得到什麼</h2>
+        <ul class="cards">
+          <li><h3>說一說就記錄</h3><p>不必找欄位、不必學操作，開口就完成。</p></li>
+          <li><h3>自動整理成列表與圖表</h3><p>今天做了什麼、還能做什麼，一眼看懂。</p></li>
+          <li><h3>貼心提醒</h3><p>在你最容易做到的時刻，給剛剛好的提示。</p></li>
+          <li><h3>個人化建議</h3><p>依你的步調，給可行的小步驟（持續推出）。</p></li>
+          <li><h3>雙語友善</h3><p>中文／英文介面切換，出國或國際合作都能用。</p></li>
+        </ul>
+      </section>
 
-    <section class="section alt">
-      <h2>適用對象</h2>
-      <div class="cards three">
-        <div><h3>忙碌的上班族與學生</h3><p>快速記錄、穩定習慣。</p></div>
-        <div><h3>長者與照護者</h3><p>用語音就能完成紀錄，家人更好協助。</p></div>
-        <div><h3>關注健康的你</h3><p>需要溫和但持續的推進力。</p></div>
-      </div>
-    </section>
+      <section class="section alt">
+        <h2>適用對象</h2>
+        <div class="cards three">
+          <div><h3>忙碌的上班族與學生</h3><p>快速記錄、穩定習慣。</p></div>
+          <div><h3>長者與照護者</h3><p>用語音就能完成紀錄，家人更好協助。</p></div>
+          <div><h3>關注健康的你</h3><p>需要溫和但持續的推進力。</p></div>
+        </div>
+      </section>
 
-    <section class="section">
-      <h2>為什麼選擇 Nuvora</h2>
-      <div class="cards three">
-        <div><h3>零門檻</h3><p>自然語句就能使用。</p></div>
-        <div><h3>不打擾</h3><p>提醒精簡，不騷擾。</p></div>
-        <div><h3>重視隱私</h3><p>資料優先存放在你的裝置，雲端將採加密與可控同步。</p></div>
-      </div>
-    </section>
+      <section class="section">
+        <h2>為什麼選擇 Nuvora</h2>
+        <div class="cards three">
+          <div><h3>零門檻</h3><p>自然語句就能使用。</p></div>
+          <div><h3>不打擾</h3><p>提醒精簡，不騷擾。</p></div>
+          <div><h3>重視隱私</h3><p>資料優先存放在你的裝置，雲端將採加密與可控同步。</p></div>
+        </div>
+      </section>
 
-    <section class="section alt" id="demo">
-      <h2>近期與接下來</h2>
-      <ul class="timeline">
-        <li><span>近期</span> — 更聰明的每日總結與待辦清單，知道今天做到幾分。</li>
-        <li><span>下一步</span> — 拍照記錄飲食，估算份量與營養。</li>
-        <li><span>之後</span> — 整合 Apple Health／Google Fit，資料一次看完。</li>
-        <li><span>企業／團隊版</span> — 匿名化儀表板，協助員工健康促進與 ESG（洽談中）。</li>
-      </ul>
-      <div class="cta">
-        <a class="btn primary" id="watchDemo2" href="https://youtu.be/YBiULfbhPRk?si=aUKPPf3IKLRQxxic" target="_blank" rel="noopener">觀看 Demo</a>
-      </div>
-    </section>
+      <section class="section alt" id="demo">
+        <h2>近期與接下來</h2>
+        <ul class="timeline">
+          <li><span>近期</span> — 更聰明的每日總結與待辦清單，知道今天做到幾分。</li>
+          <li><span>下一步</span> — 拍照記錄飲食，估算份量與營養。</li>
+          <li><span>之後</span> — 整合 Apple Health／Google Fit，資料一次看完。</li>
+          <li><span>企業／團隊版</span> — 匿名化儀表板，協助員工健康促進與 ESG（洽談中）。</li>
+        </ul>
+        <div class="cta">
+          <a class="btn primary" href="https://youtu.be/YBiULfbhPRk?si=aUKPPf3IKLRQxxic" target="_blank">觀看 Demo</a>
+        </div>
+      </section>
 
-    <section class="section">
-      <h2>榮譽與里程碑</h2>
-      <p>🏆 榮獲全國 SDGs 永續發展大賽 第二名，致力以科技推動健康與永續目標。</p>
-    </section>
+      <section class="section">
+        <h2>榮譽與里程碑</h2>
+        <p>🏆 榮獲全國 SDGs 永續發展大賽 第二名，致力以科技推動健康與永續目標。</p>
+      </section>
 
-    <section class="section alt">
-      <h2>關於我</h2>
-      <p class="about">朱雅歆（Ya Xin Zhu / Vesper）｜Nuvora 創始人・獨立開發者。相信「健康管理應該是友善、可持續的」。Nuvora 的使命，是把複雜留在後台，把信心留給你。</p>
-    </section>
+      <section class="section alt">
+        <h2>關於我</h2>
+        <p class="about">朱雅歆（Ya Xin Zhu / Vesper）｜Nuvora 創始人・獨立開發者。相信「健康管理應該是友善、可持續的」。Nuvora 的使命，是把複雜留在後台，把信心留給你。</p>
+      </section>
 
-    <section class="section" id="contact">
-      <h2>聯絡方式</h2>
-      <p>商務／合作／投資意向，歡迎來信：</p>
-      <p class="email"><a href="mailto:yaxinzhu2002@gmail.com">yaxinzhu2002@gmail.com</a></p>
+      <section class="section" id="contact">
+        <h2>聯絡方式</h2>
+        <p>商務／合作／投資意向，歡迎來信：</p>
+        <p class="email"><a href="mailto:yaxinzhu2002@gmail.com">yaxinzhu2002@gmail.com</a></p>
+        <hr style="margin:2em 0;opacity:0.2;">
+        <h3>📩 想第一時間知道 Nuvora 上架消息？</h3>
+        <form action="https://formspree.io/f/movkozwq" method="POST">
+          <input type="email" name="email" placeholder="輸入你的 Email" required style="padding:8px 12px;border-radius:8px;border:1px solid #ccc;">
+          <button type="submit" class="btn primary" style="margin-left:8px;">訂閱通知</button>
+        </form>
+      </section>
+    </div>
 
-      <hr style="margin:2em 0;opacity:0.2;">
-      <h3>📩 想第一時間知道 Nuvora 上架消息？</h3>
-      <form action="https://formspree.io/f/movkozwq" method="POST" style="margin-top:1em;">
-        <input type="email" name="email" placeholder="輸入你的 Email" required style="padding:8px 12px;border-radius:8px;border:1px solid #ccc;">
-        <button type="submit" class="btn primary" style="margin-left:8px;">訂閱通知</button>
-      </form>
-      <p style="font-size:0.9em;color:#777;margin-top:0.5em;">我們只會在 App 正式上線時寄出通知，絕不發廣告信。</p>
-    </section>
+    <!-- 英文內容 -->
+    <div class="lang en" style="display:none;">
+      <section class="hero">
+        <p class="eyebrow">Start your health journey with one sentence</p>
+        <h1 class="title">Nuvora｜Voice-First AI Health Companion</h1>
+        <p class="subtitle">Simply speak to record your water intake, sleep, mood, and daily health activities. Nuvora automatically organizes and reminds you, making healthy habits effortless.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://youtu.be/YBiULfbhPRk?si=aUKPPf3IKLRQxxic" target="_blank">Watch Demo</a>
+          <a class="btn ghost" href="#contact">Contact</a>
+        </div>
+      </section>
 
-    <section class="section" id="seo-description">
-      <p style="max-width:720px;margin:auto;text-align:center;color:#555;font-size:0.95em;line-height:1.6;">
-        Nuvora 是一款以語音為核心的 AI 健康助理，讓你只需開口說話，就能記錄飲水、睡眠、心情與日常健康狀況。
-        透過自動化圖表、提醒與個人化建議，幫助你培養可持續的健康習慣。
-        適合上班族、長者、學生與關注身心平衡的每一個人。
-      </p>
-    </section>
+      <section id="features" class="section">
+        <h2>What You Get</h2>
+        <ul class="cards">
+          <li><h3>Record by Speaking</h3><p>No forms, no typing — just talk.</p></li>
+          <li><h3>Auto Lists & Charts</h3><p>See what you’ve done and what’s next at a glance.</p></li>
+          <li><h3>Smart Reminders</h3><p>Timely nudges that fit your rhythm, never intrusive.</p></li>
+          <li><h3>Personalized Guidance</h3><p>Small, doable steps — evolving with you.</p></li>
+          <li><h3>Bilingual Friendly</h3><p>Switch between English and Chinese anytime.</p></li>
+        </ul>
+      </section>
 
-    <footer class="footer">
-      <div>© <span id="year"></span> Nuvora · All rights reserved.</div>
-      <div class="mini-lang">
-        <button id="mini-zh" class="link">中文</button><span>·</span>
-        <button id="mini-en" class="link">EN</button>
-      </div>
-    </footer>
+      <section class="section alt">
+        <h2>Who It’s For</h2>
+        <div class="cards three">
+          <div><h3>Busy Professionals & Students</h3><p>Quick logs, steady routines.</p></div>
+          <div><h3>Seniors & Caregivers</h3><p>Simple voice input, easier assistance for families.</p></div>
+          <div><h3>Anyone Seeking Wellness</h3><p>Gentle motivation for long-term consistency.</p></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Why Choose Nuvora</h2>
+        <div class="cards three">
+          <div><h3>Zero Learning Curve</h3><p>Use natural speech — no manual required.</p></div>
+          <div><h3>Non-Intrusive</h3><p>Minimal notifications, no distractions.</p></div>
+          <div><h3>Privacy First</h3><p>Your data stays on your device, with encrypted and optional cloud sync.</p></div>
+        </div>
+      </section>
+
+      <section class="section alt" id="demo">
+        <h2>Roadmap</h2>
+        <ul class="timeline">
+          <li><span>Now</span> — Smarter daily summaries and to-do tracking.</li>
+          <li><span>Next</span> — Photo-based meal logging with nutrition estimates.</li>
+          <li><span>Soon</span> — Integration with Apple Health & Google Fit.</li>
+          <li><span>Team / Enterprise</span> — Anonymous dashboards for employee wellness and ESG initiatives.</li>
+        </ul>
+        <div class="cta">
+          <a class="btn primary" href="https://youtu.be/YBiULfbhPRk?si=aUKPPf3IKLRQxxic" target="_blank">Watch Demo</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Awards & Milestones</h2>
+        <p>🏆 2nd Place in the National SDGs Innovation Competition — using AI technology to advance sustainable health and well-being.</p>
+      </section>
+
+      <section class="section alt">
+        <h2>About</h2>
+        <p class="about">Ya Xin Zhu (Vesper) — Founder & Independent Developer of Nuvora. Believes that “Health management should be friendly and sustainable.” Nuvora’s mission is to keep complexity behind the scenes and confidence in your hands.</p>
+      </section>
+
+      <section class="section" id="contact">
+        <h2>Contact</h2>
+        <p>For partnerships, collaborations, or investment inquiries, please email:</p>
+        <p class="email"><a href="mailto:yaxinzhu2002@gmail.com">yaxinzhu2002@gmail.com</a></p>
+        <hr style="margin:2em 0;opacity:0.2;">
+        <h3>📩 Want to be the first to know when Nuvora launches?</h3>
+        <form action="https://formspree.io/f/movkozwq" method="POST">
+          <input type="email" name="email" placeholder="Enter your email" required style="padding:8px 12px;border-radius:8px;border:1px solid #ccc;">
+          <button type="submit" class="btn primary" style="margin-left:8px;">Subscribe</button>
+        </form>
+      </section>
+    </div>
   </main>
 
-  <script src="script.js"></script>
+  <footer class="footer">
+    <div>© <span id="year"></span> Nuvora · All rights reserved.</div>
+    <div class="mini-lang">
+      <button id="mini-zh" class="link">中文</button><span>·</span>
+      <button id="mini-en" class="link">EN</button>
+    </div>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') || 'zh';
+
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
+      document.querySelector('.' + lang).style.display = 'block';
+
+      // 切換按鈕樣式
+      document.getElementById('btn-zh').classList.remove('active');
+      document.getElementById('btn-en').classList.remove('active');
+      if (lang === 'en') {
+        document.getElementById('btn-en').classList.add('active');
+      } else {
+        document.getElementById('btn-zh').classList.add('active');
+      }
+
+      // 更新 meta 與 title
+      if (lang === 'en') {
+        document.title = 'Nuvora｜Voice-First AI Health Companion';
+        document.getElementById('meta-desc').setAttribute('content', 'Nuvora is a voice-first AI health companion that helps you record and organize wellness data effortlessly.');
+        document.getElementById('og-title').setAttribute('content', document.title);
+        document.getElementById('og-desc').setAttribute('content', 'Start your health journey with one sentence.');
+        document.getElementById('og-url').setAttribute('content', 'https://nuvora-web.vercel.app/?lang=en');
+      } else {
+        document.title = 'Nuvora｜AI 語音健康助理';
+        document.getElementById('meta-desc').setAttribute('content', 'Nuvora 是一款以語音為先的 AI 健康助理，幫你輕鬆記錄每日健康習慣。');
+        document.getElementById('og-title').setAttribute('content', document.title);
+        document.getElementById('og-desc').setAttribute('content', '用說的就能記錄健康，Nuvora 自動整理、提醒，讓維持好習慣變容易。');
+        document.getElementById('og-url').setAttribute('content', 'https://nuvora-web.vercel.app/?lang=zh');
+      }
+    }
+
+    setLanguage(lang);
+
+    const changeLang = target => window.location.search = '?lang=' + target;
+    document.getElementById('btn-zh').addEventListener('click', () => changeLang('zh'));
+    document.getElementById('btn-en').addEventListener('click', () => changeLang('en'));
+    document.getElementById('mini-zh').addEventListener('click', () => changeLang('zh'));
+    document.getElementById('mini-en').addEventListener('click', () => changeLang('en'));
+  </script>
 </body>
 </html>
